@@ -93,12 +93,24 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
-      color: Colors.blue,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Text('Hola mundo', style: TextStyle(color: Colors.white),)
+
+    final colors = Theme.of(context).colorScheme;
+
+    return ClipRRect(
+      //colocar bordes redondeados
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        //colocar el color del tema
+        color: colors.primary,
+        child: InkWell(
+          //volverlo boton
+          onTap: () {},
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text('Hola mundo', style: TextStyle(color: Colors.white),),
+            ),
         ),
+      ),
     );
   }
 }
