@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       //el router para mostrar los screen
       routerConfig: appRouter,
-      title: 'Flutter Demo',
+      title: 'Flutter Widgets',
       debugShowCheckedModeBanner: false,
       theme:AppTheme(selectedColor: 4).getTheme(),
       
